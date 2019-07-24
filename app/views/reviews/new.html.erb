@@ -1,0 +1,8 @@
+<div class="container m-4 text-left">
+  <h2>Add a Review for <%= @restaurant.name %></h2>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating, collection: %w(1 2 3 4 5), as: :radio_buttons %>
+    <%= f.submit "add my review", class: "btn btn-success" %>
+  <% end %>
+</div>
